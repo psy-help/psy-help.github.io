@@ -382,17 +382,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const dots = document.querySelectorAll('.theme-dot');
 
   if (dots.length > 0) {
+    // Initial active state set to theme 1
+    dots[0].classList.add('theme-dot--active');
+
     dots.forEach(dot => {
       dot.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent menu or other triggers
+        e.stopPropagation();
         const theme = dot.dataset.theme;
 
-        // Logic
+        // Clear active states
+        dots.forEach(d => d.classList.remove('theme-dot--active'));
+        dot.classList.add('theme-dot--active');
+
+        // Apply theme to body
         document.body.classList.remove('theme-2', 'theme-3', 'theme-4');
         if (theme > 1) {
           document.body.classList.add(`theme-${theme}`);
         }
-        console.log(`Theme set to: ${theme}`);
       });
     });
   }
