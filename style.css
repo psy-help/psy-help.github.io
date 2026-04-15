@@ -18,6 +18,7 @@
   --max-w: 1380px;
   --px: clamp(24px, 5vw, 80px);
   --ink-rgb: 13, 9, 6;
+  --paper-rgb: 246, 240, 232;
   --paper-dark: #eee7df;
   --dark-3: #1a120a;
 }
@@ -297,6 +298,7 @@ textarea {
 
 /* ─── GLOBAL UTILS ────────────────────────────────────────── */
 .section-label {
+  font-family: 'Neue Haas Grotesk Display Pro', var(--f-body);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: .18em;
@@ -2176,12 +2178,34 @@ textarea {
   .hero__stats-bar {
     flex-wrap: wrap;
     gap: 0;
+    border-bottom: 1px solid rgba(246, 240, 232, .08);
+    margin-bottom: 40px;
   }
 
   .hero__stat {
-    padding: 20px 0;
+    padding: 24px 0;
     flex: 0 0 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-bottom: 1px solid rgba(246, 240, 232, .05);
   }
+
+  .hero__stat em {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .hero__stat span {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+
+  /* Remove border for the last two items in 2x2 grid */
+  .hero__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
 
   .hero__stat-sep {
     display: none;
@@ -2369,6 +2393,7 @@ textarea {
 
 @media (max-width: 768px) {
   .cookie-banner {
+    padding: 24px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -2377,8 +2402,8 @@ textarea {
     border-top: 1px solid rgba(var(--ink-rgb), 0.1);
     border-left: none;
     border-right: none;
-    padding: 24px;
   }
+
 
   .cookie-banner__inner {
     flex-direction: row;
