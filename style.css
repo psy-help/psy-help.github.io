@@ -24,7 +24,7 @@
 }
 
 .help-list {
-  margin: 12px 0;
+  margin: 6px 0;
   padding: 0;
 }
 
@@ -359,6 +359,12 @@ textarea {
   background: var(--warm);
   transform: translateY(-2px);
   box-shadow: 0 12px 36px rgba(200, 121, 61, .3);
+}
+
+.about__left .btn-primary {
+  margin-top: auto;
+  margin-bottom: 40px;
+  align-self: flex-start;
 }
 
 /* ─── NAV ─────────────────────────────────────────────────── */
@@ -953,12 +959,17 @@ textarea {
 /* ─── ABOUT ───────────────────────────────────────────────── */
 .about {
   background: var(--cream);
-  padding: clamp(60px, 8vh, 100px) var(--px);
+  padding: clamp(40px, 5vh, 70px) var(--px);
 }
 
 .about__right {
-  padding-top: 0;
-  /* aligned by grid */
+  padding-top: 52px;
+  /* Visual alignment with the first line of the left heading */
+}
+
+.about__left, .about__right {
+  display: flex;
+  flex-direction: column;
 }
 
 .about__body {
@@ -981,7 +992,7 @@ textarea {
   line-height: 1.0;
   color: var(--ink);
   letter-spacing: -.02em;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .about__h2 em {
@@ -991,9 +1002,9 @@ textarea {
 
 .about__body p {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.7;
   color: rgba(13, 9, 6, .65);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .about__body strong {
@@ -1048,6 +1059,8 @@ textarea {
   background: var(--dark);
   border-radius: 8px;
   padding: 36px 32px;
+  margin-top: auto;
+  margin-bottom: 40px;
 }
 
 .about__quote p {
@@ -2131,6 +2144,11 @@ textarea {
 
   .about__grid {
     grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about__right {
+    padding-top: 0;
   }
 
   .contact {
