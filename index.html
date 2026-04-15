@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Мальцева Любовь — гештальт-терапевт, магистр психологических наук. Работаю с тревогой, отношениями и смыслами. Ростов-на-Дону и онлайн." />
+    <title>Мальцева Любовь — Гештальт-терапевт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Neue+Haas+Grotesk+Display+Pro:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+    <nav class="nav" id="nav">
+        <div class="nav__logo"></div>
+        <div class="nav__center">
+            <span class="nav__tag">Гештальт-терапевт</span>
+        </div>
+        <div class="nav__right">
+            <div class="theme-palette" id="themePalette">
+                <div class="theme-dot" data-theme="1"></div>
+                <div class="theme-dot" data-theme="2"></div>
+                <div class="theme-dot" data-theme="3"></div>
+                <div class="theme-dot" data-theme="4"></div>
+            </div>
+            <a href="#contact" class="nav__cta">Записаться →</a>
+            <button class="nav__burger" id="navBurger" aria-label="Меню">
+                <span class="nav__burger-line"></span>
+                <span class="nav__burger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- FULLSCREEN MENU -->
+    <div class="fullmenu" id="fullMenu">
+        <div class="fullmenu__inner">
+            <nav class="fullmenu__nav">
+                <a href="#about" class="fullmenu__link" data-num="01">Помощь</a>
+                <a href="#gestalt" class="fullmenu__link" data-num="02">О методе</a>
+                <a href="#services" class="fullmenu__link" data-num="03">Услуги</a>
+                <a href="#process" class="fullmenu__link" data-num="04">Процесс</a>
+                <a href="#contact" class="fullmenu__link" data-num="05">Контакт</a>
+            </nav>
+            <div class="fullmenu__info">
+                <p>Ростов-на-Дону · Онлайн</p>
+                <p>Пн–Пт, 10:00–20:00</p>
+                <a href="https://t.me/malchenkolubov">Telegram: @malchenkolubov</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════ HERO ══════════════════════════════ -->
+    <section class="hero section" id="hero">
+        <!-- Animated canvas background -->
+        <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+        <!-- Glow blobs -->
+        <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+        <div class="hero__top">
+            <!-- Location removed -->
+        </div>
+        <!-- Location removed -->
+        </div>
+
+        <div class="hero__main">
+            <div class="hero__headline-wrap">
+                <div class="hero__pre" data-split>
+                    <span>Психолог</span>
+                    <span class="hero__pre-dash">—</span>
+                    <span>Гештальт-терапевт</span>
+                </div>
+                <h1 class="hero__h1">
+                    <span class="hero__h1-line" data-reveal>
+                        <span>Контакт</span>
+                    </span>
+                    <span class="hero__h1-line hero__h1-line--italic" data-reveal>
+                        <span>с собой</span>
+                    </span>
+                    <span class="hero__h1-line" data-reveal>
+                        <span>исцеляет</span>
+                    </span>
+                </h1>
+            </div>
+
+            <div class="hero__side">
+                <div class="hero__portrait-block">
+                    <div class="hero__img-frame">
+                        <img src="Screenshot_271.png"
+                            alt="Мальцева Любовь — гештальт-терапевт, магистр психологических наук"
+                            class="hero__portrait-photo" />
+                        <div class="hero__img-overlay">
+                            <div class="hero__img-caption">
+                                <span>Мальцева Любовь</span>
+                                <span>Магистр психол. наук · Гештальт-терапевт</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="hero__desc">
+                    <p>Знания и опыт помогают мне быть психологом, которому доверяют.</p>
+                    <p>Помогаю людям восстановить контакт с настоящим собой. Работаю с различными запросами.</p>
+                    <a href="#about" class="hero__arrow-link">
+                        <span>Узнать больше</span>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" stroke="currentColor" stroke-opacity="0.3" />
+                            <path d="M20 13 L20 27 M14 21 L20 27 L26 21" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__stats-bar">
+            <div class="hero__stat">
+                <em>3</em><span>года<br />практики</span>
+            </div>
+            <div class="hero__stat-sep"></div>
+            <div class="hero__stat">
+                <em>100+</em><span>клиентов<br />прошли терапию</span>
+            </div>
+            <div class="hero__stat-sep"></div>
+            <div class="hero__stat">
+                <em>3 000</em><span>часов<br />обучения</span>
+            </div>
+            <div class="hero__stat-sep"></div>
+            <div class="hero__stat">
+                <em>Магистр</em><span>психологии</span>
+            </div>
+        </div>
+        <!-- Minimalist Tension Meter -->
+        <div class="scroll-tension-wrap" id="tensionMeter" aria-hidden="true">
+            <div class="scroll-tension-scale">
+                <div class="scroll-tension-progress" id="scrollSpring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee">
+            <div class="marquee__track">
+                <span>Гештальт-терапия</span><span class="marquee__dot">·</span>
+                <span>Контакт с собой</span><span class="marquee__dot">·</span>
+                <span>Здесь и сейчас</span><span class="marquee__dot">·</span>
+                <span>Индивидуальная терапия</span><span class="marquee__dot">·</span>
+                <span>Осознанность</span><span class="marquee__dot">·</span>
+                <span>Ростов-на-Дону · Онлайн</span><span class="marquee__dot">·</span>
+                <span>Гештальт-терапия</span><span class="marquee__dot">·</span>
+                <span>Контакт с собой</span><span class="marquee__dot">·</span>
+                <span>Здесь и сейчас</span><span class="marquee__dot">·</span>
+                <span>Индивидуальная терапия</span><span class="marquee__dot">·</span>
+                <span>Осознанность</span><span class="marquee__dot">·</span>
+                <span>Ростов-на-Дону · Онлайн</span><span class="marquee__dot">·</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════ ABOUT / HELP ═══════════════════════ -->
+    <section class="about section" id="about">
+        <div class="about__grid">
+            <div class="about__left">
+                <div class="section-label">— 01 / Помощь</div>
+                <h2 class="about__h2" data-reveal-text>
+                    С чем я могу<br />
+                    <em>вам помочь?</em>
+                </h2>
+                <div class="about__body">
+                    <p style="margin-bottom: 8px;">Я работаю с широким спектром запросов. Чаще всего ко мне приходят,
+                        когда беспокоят:</p>
+                    <ul class="help-list">
+                        <li><strong>Отношение к себе:</strong> стыд, внутренняя критика, низкая самооценка;</li>
+                        <li><strong>Общение с миром:</strong> тревога в социуме, страх новых знакомств, сложность в
+                            публичных выступлениях;</li>
+                        <li><strong>Близость и семья:</strong> конфликты с партнером, переживание измены или
+                            расставания, трудности в принятии отношений, вопросы детско-родительских связей;</li>
+                        <li><strong>Эмоциональное состояние:</strong> апатия, упадок сил, депрессивные эпизоды,
+                            нестабильность настроения;</li>
+                        <li><strong>Управление эмоциями:</strong> сложности с проживанием гнева, вины, ревности или
+                            зависти;</li>
+                        <li><strong>Действия и цели:</strong> прокрастинация, отсутствие мотивации, поиск своего пути и
+                            самореализация.</li>
+                    </ul>
+                    <p>Если нет чёткого запроса — это нормально. Часто бывает
+                        сложно сразу назвать проблему. На первой встрече мы бережно разберёмся в ситуации и определим
+                        цели терапии.</p>
+                </div>
+                <a href="#contact" class="btn-primary">Бесплатная встреча →</a>
+            </div>
+
+            <div class="about__right">
+                <div class="section-label">— Образование</div>
+                <div class="about__credentials-block">
+                    <div class="about__cred">
+                        <div class="about__cred-num">01</div>
+                        <div>
+                            <h4>Образование</h4>
+                            <p>Магистр психологических наук. Южный федеральный университет (ЮФУ). Южно-российский
+                                гештальт институт.</p>
+                        </div>
+                    </div>
+                    <div class="about__cred">
+                        <div class="about__cred-num">02</div>
+                        <div style="font-size: 1.05em;">
+                            <h4>Личная терапия</h4>
+                            <p>500+ часов личного терапевтического опыта. Это залог моей устойчивости как специалиста.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__cred">
+                        <div class="about__cred-num">03</div>
+                        <div style="font-size: 1.05em;">
+                            <h4>Супервизия</h4>
+                            <p>Регулярные встречи с супервизором. Обязательное условие профессиональной этики.</p>
+                        </div>
+                    </div>
+                    <div class="about__cred">
+                        <div class="about__cred-num">04</div>
+                        <div style="font-size: 1.05em;">
+                            <h4>Дополнительные специальные курсы</h4>
+                            <p>Перинатальная психология (ЮФУ), детско-родительские отношения (ЮРГИ).</p>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="about__quote"
+                    style="margin-top: 48px; border-left: 2px solid var(--warm); padding-left: 24px;">
+                    <p style="font-size: 1.25em; line-height: 1.4;">«Контакт — это место, где происходит рост.»</p>
+                    <cite
+                        style="display: block; margin-top: 12px; font-style: normal; opacity: 0.6; text-transform: uppercase; font-size: 11px; letter-spacing: 0.1em;">—
+                        Фридрих Перлз, основатель гештальт-терапии</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ═══════════════════════════════ GESTALT ═══════════════════════════ -->
+    <section class="gestalt section" id="gestalt">
+        <div class="gestalt__container">
+            <div class="gestalt__top">
+                <div class="gestalt__title-area">
+                    <div class="section-label" style="margin-bottom: 24px;">— 02 / Гештальт</div>
+                    <h2 class="gestalt__h2" data-reveal-text>Что такое<br><em class="gestalt__h2-italic">гештальт?</em>
+                    </h2>
+                    <p class="gestalt__subtext">Гештальт — от немецкого «целостный образ». Подход, в котором тело,
+                        чувства, мысли и действия неразделимы.</p>
+                </div>
+                <div class="gestalt__decorative">
+                    <div class="gestalt__circle-dot"></div>
+                </div>
+            </div>
+
+            <div class="gestalt__grid">
+                <div class="gestalt__item" data-fade>
+                    <div class="gestalt__item-content">
+                        <h3 class="gestalt__item-title">Здесь и сейчас</h3>
+                        <p class="gestalt__item-text">Работа происходит в настоящем моменте. Не «там и тогда», а «здесь
+                            и сейчас» — именно здесь живёт настоящий опыт и возможность изменений.</p>
+                    </div>
+                    <div class="gestalt__item-num">01</div>
+                </div>
+                <div class="gestalt__item" data-fade>
+                    <div class="gestalt__item-content">
+                        <h3 class="gestalt__item-title">Контакт и встреча</h3>
+                        <p class="gestalt__item-text">Исцеление происходит в отношениях. Пространство между терапевтом и
+                            клиентом — место, где возможна настоящая встреча и реальная трансформация.</p>
+                    </div>
+                    <div class="gestalt__item-num">02</div>
+                </div>
+                <div class="gestalt__item" data-fade>
+                    <div class="gestalt__item-content">
+                        <h3 class="gestalt__item-title">Осознанность</h3>
+                        <p class="gestalt__item-text">Осознание само по себе целительно. Когда человек начинает замечать
+                            свои паттерны — они теряют власть над ним. Появляется выбор.</p>
+                    </div>
+                    <div class="gestalt__item-num">03</div>
+                </div>
+                <div class="gestalt__item" data-fade>
+                    <div class="gestalt__item-content">
+                        <h3 class="gestalt__item-title">Телесность и чувства</h3>
+                        <p class="gestalt__item-text">Тело хранит всё пережитое. Гештальт работает с ощущениями,
+                            дыханием, жестами — они рассказывают то, что ум пытается скрыть.</p>
+                    </div>
+                    <div class="gestalt__item-num">04</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services section" id="services">
+        <div class="services__header">
+            <div class="section-label">— 03 / Услуги</div>
+            <h2 class="services__h2" data-reveal-text>Форматы<br />работы</h2>
+        </div>
+
+        <div class="services__list">
+
+            <div class="service-item service-item--dark">
+                <div class="service-item__num">—&thinsp;01</div>
+                <div class="service-item__content">
+                    <h3>Индивидуальная<br />терапия</h3>
+                    <p>Безопасное пространство для исследования себя, своих паттернов и
+                        отношений с миром. Основной формат работы.</p>
+                    <ul>
+                        <li>60 минут — одна сессия</li>
+                        <li>Рекомендую 1 раз в неделю</li>
+                        <li>Очно в Ростове-на-Дону или онлайн</li>
+                    </ul>
+                </div>
+                <div class="service-item__price">
+                    <div class="service-item__price-amount">2 500 ₽</div>
+                    <div class="service-item__price-label">за сессию</div>
+                    <a href="#contact" class="service-item__btn">Записаться →</a>
+                </div>
+            </div>
+
+            <div class="service-item service-item--accent">
+                <div class="service-item__num">—&thinsp;02</div>
+                <div class="service-item__content">
+                    <h3>Первичная<br />консультация</h3>
+                    <p>Знакомство перед началом работы. Вы сможете получить ответы на ваши вопросы и понять могу ли я
+                        быть Вам полезной.</p>
+                    <ul>
+                        <li>30 минут — онлайн</li>
+                        <li>Без обязательств</li>
+                        <li>Первый шаг бесплатно</li>
+                    </ul>
+                </div>
+                <div class="service-item__price">
+                    <div class="service-item__price-amount">Бесплатно</div>
+                    <div class="service-item__price-label">первая встреча</div>
+                    <a href="#contact" class="service-item__btn service-item__btn--inv">Записаться →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PROCESS ═══════════════════════════ -->
+    <section class="process section" id="process">
+        <div class="process__intro">
+            <div class="section-label">— 04 / Как работаю</div>
+            <h2 class="process__h2" data-reveal-text>Путь<br /><em>изменений</em></h2>
+        </div>
+        <div class="process__steps">
+            <div class="process__step" data-step="01">
+                <div class="process__step-line"></div>
+                <div class="process__step-body">
+                    <div class="process__step-num">01</div>
+                    <h3>Первый контакт</h3>
+                    <p>Вы пишете или звоните. Мы договариваемся о бесплатной 30-минутной встрече онлайн.</p>
+                </div>
+            </div>
+            <div class="process__step" data-step="02">
+                <div class="process__step-line"></div>
+                <div class="process__step-body">
+                    <div class="process__step-num">02</div>
+                    <h3>Первая сессия</h3>
+                    <p>Вы рассказываете, что привело вас. Я слушаю, задаю вопросы. Вместе начинаем понимать ваш запрос и
+                        что хочется изменить.</p>
+                </div>
+            </div>
+            <div class="process__step" data-step="03">
+                <div class="process__step-line"></div>
+                <div class="process__step-body">
+                    <div class="process__step-num">03</div>
+                    <h3>Регулярная работа</h3>
+                    <p>Сессии 1 в неделю или по необходимости. Мы работаем с тем, что приносите вы — переживания,
+                        события, отношения.</p>
+                </div>
+            </div>
+            <div class="process__step" data-step="04">
+                <div class="process__step-line"></div>
+                <div class="process__step-body">
+                    <div class="process__step-num">04</div>
+                    <h3>Изменения</h3>
+                    <p>Появляется ясность, чувствительность, способность делать выборы. Жизнь начинает ощущаться
+                        по-другому — более живой и своей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FAQ ═══════════════════════════════ -->
+    <section class="faq section" id="faq">
+        <div class="faq__header">
+            <div class="section-label">— Частые вопросы</div>
+            <h2 class="faq__h2" data-reveal-text>FAQ</h2>
+        </div>
+        <div class="faq__body">
+            <div class="faq__item" id="faq1">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq1-a">
+                    <span>Как долго длится терапия?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__a" id="faq1-a" role="region">
+                    <p>Зависит от запроса и глубины работы. Краткосрочная работа — 3–6 месяцев (10–20 сессий). Более
+                        глубокая работа с характерологическими темами может занять 1–3 года. Средняя продолжительность у
+                        большинства клиентов — около года.</p>
+                </div>
+            </div>
+            <div class="faq__item" id="faq2">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq2-a">
+                    <span>Работает ли онлайн так же эффективно?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__a" id="faq2-a" role="region">
+                    <p>Да, исследования подтверждают сопоставимую эффективность. Работаю через Zoom или видеозвонок.
+                        Важно иметь тихое место и стабильное соединение — и этого достаточно.</p>
+                </div>
+            </div>
+            <div class="faq__item" id="faq3">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq3-a">
+                    <span>Как понять, подходим ли мы друг другу?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__a" id="faq3-a" role="region">
+                    <p>Для этого и существует бесплатная первичная консультация. 30 минут — и вы почувствуете, есть ли
+                        контакт. Если нет — это нормально, и я помогу найти другого специалиста.</p>
+                </div>
+            </div>
+            <div class="faq__item" id="faq4">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq4-a">
+                    <span>Можно ли прекратить терапию в любой момент?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__a" id="faq4-a" role="region">
+                    <p>Да, терапия добровольна. Тем не менее рекомендую обсуждать желание завершить работу прямо в
+                        сессии — часто за ним стоит что-то важное. Хорошее завершение само по себе часть терапии.</p>
+                </div>
+            </div>
+            <div class="faq__item" id="faq5">
+                <button class="faq__q" aria-expanded="false" aria-controls="faq5-a">
+                    <span>Соблюдается ли конфиденциальность?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__a" id="faq5-a" role="region">
+                    <p>Абсолютно. Всё, что происходит на сессиях, строго конфиденциально. Исключения — ситуации угрозы
+                        жизни, предусмотренные этическим кодексом и законом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════ -->
+    <section class="contact section" id="contact">
+        <div class="contact__grid">
+            <div class="contact__content">
+                <div class="section-label">— 05 / Контакт</div>
+                <h2 class="contact__h2" data-reveal-text>
+                    Готовы<br />
+                    <em>сделать шаг?</em>
+                </h2>
+                <p class="contact__sub">Если у вас есть вопросы или вы хотите записаться на консультацию — свяжитесь со
+                    мной любым удобным способом.</p>
+
+                <div class="contact__details">
+                    <a href="tel:+79289087078" class="contact__detail" id="cPhone">
+                        <span class="contact__detail-label">MAX / WhatsApp / Telegram</span>
+                        <span class="contact__detail-val">+7 (928) 908-70-78</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact__image-area" data-fade>
+                <div class="contact__img-frame">
+                    <img src="2.png" alt="Психолог" class="contact__portrait" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <nav class="footer__nav">
+                <a href="#about">Помощь</a>
+                <a href="#gestalt">О методе</a>
+                <a href="#services">Услуги</a>
+                <a href="#process">Процесс</a>
+                <a href="#contact">Контакт</a>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 Мальцева Любовь — Гештальт-терапевт, магистр психологических наук</span>
+            <span>+7 (928) 908-70-78</span>
+        </div>
+    </footer>
+
+    <!-- COOKIE CONSENT (EDITORIAL REDESIGN) -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner__inner">
+            <div class="cookie-banner__content">
+                <span class="cookie-content-tag">Privacy</span>
+                <p>Мы используем куки для корректной работы сайта.</p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn" id="cookieAccept">Принять →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
