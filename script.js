@@ -11,9 +11,10 @@ const compactNav = window.matchMedia("(max-width: 999px)");
 let heroVisible = true;
 let contactVisible = false;
 let menuOpen = false;
+const visibleBookingButtons = new Set();
 
 function updateContact() {
-  stickyContact.hidden = !mobile.matches || heroVisible || contactVisible || menuOpen;
+  stickyContact.hidden = !mobile.matches || heroVisible || contactVisible || menuOpen || visibleBookingButtons.size > 0;
 }
 function setMenu(open, restoreFocus = false) {
   menuOpen = open;
@@ -59,6 +60,14 @@ if ("IntersectionObserver" in window) {
   );
   observer.observe(hero);
   observer.observe(contact);
+  const bookingObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) visibleBookingButtons.add(entry.target);
+      else visibleBookingButtons.delete(entry.target);
+    }
+    updateContact();
+  }, { threshold: 0.5, rootMargin: '-90px 0px -85px 0px' });
+  document.querySelectorAll('.service-card .button').forEach(button => bookingObserver.observe(button));
 }
 document.getElementById("year").textContent = new Date().getFullYear();
 

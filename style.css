@@ -1199,3 +1199,11 @@ details[open] summary::after {
     color: black;
   }
 }
+
+/* Keep practical details readable on phones. */
+@media (max-width: 699px) {
+  .service-meta { font-size: 14px; }
+  .service-footnote { font-size: 13px; line-height: 1.6; }
+  .button-note { font-size: 13px; }
+  .hero-portrait figcaption span:last-child { font-size: 12px; }
+}
